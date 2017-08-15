@@ -64,7 +64,10 @@ function typeToArbitrary(type: ts.TypeNode): ts.Expression {
         if (!ts.isIdentifier(member.name)) {
           throw new Error('unsupported member name in interface');
         }
-        return [member.name.text, typeToArbitrary(member.type)] as [string, ts.Expression];
+        return [member.name.text, typeToArbitrary(member.type)] as [
+          string,
+          ts.Expression
+        ];
       });
       return ts.createCall(
         ts.createPropertyAccess(
