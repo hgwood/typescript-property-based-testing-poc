@@ -1,0 +1,22 @@
+{
+  "name": "typescript-property-based-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tsc && node index4.js && node example.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jsverify": "^0.8.2",
+    "tape": "^4.8.0",
+    "ts-simple-ast": "^0.48.2",
+    "tspoon": "^1.0.460",
+    "typescript": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.22"
+  }
+}
