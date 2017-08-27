@@ -1,15 +1,8 @@
-/**
- * https://github.com/Microsoft/TypeScript/wiki/Using-the-Compiler-API
- * http://blog.scottlogic.com/2017/05/02/typescript-compiler-api-revisited.html
- * https://stackoverflow.com/questions/44599255/resolve-original-node-by-identifier-in-typescript-ast
- */
-
 import { readFileSync, writeFileSync } from 'fs';
 import * as ts from 'typescript';
-import * as jsc from 'jsverify';
 
 const fileName = './example.ts';
-let program = ts.createProgram([fileName], {});
+const program = ts.createProgram([fileName], {});
 const checker = program.getTypeChecker();
 
 function typeToArbitrary(type: ts.TypeNode): ts.Expression {
