@@ -11,10 +11,12 @@
   "license": "ISC",
   "dependencies": {
     "jsverify": "^0.8.2",
+    "ramda": "^0.24.1",
     "tape": "^4.8.0",
     "typescript": "^2.4.2"
   },
   "devDependencies": {
-    "@types/node": "^8.0.22"
+    "@types/node": "^8.0.22",
+    "@types/ramda": "^0.24.8"
   }
 }

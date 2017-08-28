@@ -1,10 +1,11 @@
 import * as jsc from 'jsverify';
+import arbitraries from './genotype';
 
 jsc.assert(
   /*jsc.fn(jsc.bool), jsc.bool*/
-  jsc.forall(function(f: (a: boolean) => boolean, b: boolean) {
+  jsc.forall(arbitraries(function(f: (a: boolean) => boolean, b: boolean) {
     return f(f(f(b))) === f(b);
-  }),
+  })),
 );
 
 interface Whatever {
@@ -14,7 +15,7 @@ interface Whatever {
 
 jsc.assert(
   /* jsc.record({s: jsc.string, n: jsc.number}) */
-  jsc.forall(function(whatever: Whatever) {
+  jsc.forall(arbitraries(function(whatever: Whatever) {
     return typeof whatever.s === 'string' && typeof whatever.n === 'number';
-  }),
+  })),
 );
